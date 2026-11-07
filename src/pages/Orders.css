@@ -1,0 +1,286 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.orders-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+.orders-header {
+  background: white;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px #00000008;
+}
+
+.orders-header h2 {
+  color: #172554;
+  margin: 0;
+}
+
+.orders-header button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Main */
+
+.orders-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.orders-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.orders-title h1 {
+  color: #172554;
+  margin: 0 0 8px;
+}
+
+.orders-title p {
+  color: #64748b;
+  margin: 0;
+}
+
+.orders-title span {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* Table */
+
+.orders-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 3px 15px #00000008;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.orders-table th {
+  background: #eff6ff;
+  color: #172554;
+  text-align: left;
+  padding: 18px;
+  font-size: 14px;
+}
+
+.orders-table td {
+  padding: 18px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.order-id {
+  color: #2563eb !important;
+  font-weight: bold;
+}
+
+.order-amount {
+  color: #172554 !important;
+  font-weight: bold;
+}
+
+.order-status {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* View Button */
+
+.view-order-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.view-order-btn:hover {
+  background: #dbeafe;
+}
+
+/* Empty Orders */
+
+.empty-orders {
+  background: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 12px;
+  color: #94a3b8;
+}
+
+.empty-orders h2 {
+  color: #172554;
+}
+
+.empty-orders button {
+  background: #2563eb;
+  color: white;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Modal */
+
+.order-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.order-modal {
+  width: 100%;
+  max-width: 550px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 15px;
+}
+
+.modal-header h2 {
+  color: #172554;
+  margin: 0;
+}
+
+.modal-header button {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding-top: 15px;
+}
+
+.modal-body p {
+  color: #475569;
+  line-height: 1.5;
+}
+
+.modal-body h3 {
+  color: #172554;
+  margin-top: 25px;
+}
+
+.order-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-detail-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.order-detail-item div {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-detail-item h4 {
+  color: #172554;
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+.order-detail-item p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.order-detail-item strong {
+  font-size: 13px;
+  color: #172554;
+}
+
+.modal-total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2563eb;
+  margin-top: 25px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .orders-container {
+    padding: 20px 12px;
+  }
+
+  .orders-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .orders-header {
+    padding: 15px;
+  }
+
+  .order-modal {
+    padding: 18px;
+  }
+}
